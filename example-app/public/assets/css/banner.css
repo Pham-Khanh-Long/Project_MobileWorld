@@ -1,0 +1,132 @@
+.slide-container{
+    width: 1290px;
+    max-width: 100vw;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.slide-container .slides{
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slide-container .slides img{
+    position: absolute;
+    width: 100%;
+    height: 95%;
+}
+.slide-container .slides img:not(.active){
+    top: 0;
+    left: -100%;
+}
+.buttons{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+span.prev{
+    width: 40px;
+    height: 40px;
+    margin-left: 14px;
+    border-radius: 50%;
+    background: #ccc url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/arrow-left.png) no-repeat center center;
+    background-size: 10px 20px;
+    color: white;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+span.next{
+    width: 40px;
+    height: 40px;
+    margin-right: 14px;
+    border-radius: 50%;
+    background: #ccc url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/arrow-right.png) no-repeat center center;
+    background-size: 10px 20px;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+.dotsContainer{
+    color: var(--text-color);
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.dotsContainer .dot{
+    display: block;
+    width: 1290px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    overflow: hidden;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 15px 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.5s;
+    background: var(--white-color);
+
+}
+.dotsContainer .active{
+    background-color: #fcde04;
+}
+
+/* Slider-bottom */
+
+.slide-container-2{
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.slides-item-bottom img{
+    width: 400px;
+    height: 150px;
+    margin-right: 45px;
+    border-radius: 10px;
+}
+
+@keyframes next1{
+    from{
+        left: 0%
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left: 100%
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes prev1{
+    from{
+        left: 0%
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left: -100%
+    }
+    to{
+        left: 0%;
+    }
+}
+

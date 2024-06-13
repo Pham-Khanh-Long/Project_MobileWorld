@@ -1,0 +1,33 @@
+.breadcrumb {
+    padding: 10px 0;
+    background: #f3f6f9;
+    margin-bottom:30px;
+    list-style: none;
+}
+.breadcrumb .items-breadcrumb {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.breadcrumb .items-breadcrumb li {
+    gap: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    align-items: center;
+    display: inline-flex;
+}
+.breadcrumb .items-breadcrumb li a {
+    line-height: 20px;
+    align-items: center;
+    display: inline-flex;
+}
+.breadcrumb .items-breadcrumb li:not(:last-child):after {
+    color: gray;
+    content: '\f105';
+    font-family: 'Fontawesome';
+}
+.breadcrumb .items-breadcrumb li:last-child {
+    color: gray;
+}

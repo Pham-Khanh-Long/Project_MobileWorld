@@ -1,0 +1,189 @@
+.box-title {
+    margin: 0 0 30px;
+}
+.step-by-step {
+    text-align: center;
+}
+.step-by-step li {
+    padding: 0 25px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.step-by-step li a {
+    z-index: 20;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 60px;
+    position: relative;
+}
+.step-by-step li:nth-child(2):before, .step-by-step li:nth-child(2)::after, .step-by-step li:nth-child(3):before, .step-by-step li:nth-child(3)::after {
+    top: 30%;
+    content: '';
+    height: 1px;
+    width: 200%;
+    display: block;
+    position: absolute;
+    background-color: darkgray;
+    transform: translate(-35%, -50%);
+}
+.step-by-step li a.icon-account::before {
+    content: '\f2bd';
+}
+.step-by-step li a:hover::before, .step-by-step li a.active::before {
+    color: white;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.step-by-step li a::before {
+    top: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    font-size: 20px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    background: white;
+    left: calc(50% - 25px);
+    font-family: "FontAwesome";
+    border: 1px solid darkgray;
+}
+.step-by-step li a.icon-userorder::before {
+    content: '\f0ca';
+}
+
+.step-by-step li a::before {
+    top: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    font-size: 20px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    background: white;
+    left: calc(50% - 25px);
+    font-family: "FontAwesome";
+    border: 1px solid darkgray;
+}
+.step-by-step li a.icon-changepass::before {
+    content: '\f084';
+}
+.step-by-step li a::before {
+    top: 0;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    font-size: 20px;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    background: white;
+    left: calc(50% - 25px);
+    font-family: "FontAwesome";
+    border: 1px solid darkgray;
+}
+.account-form {
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    background: #f3f6f9;
+}
+.account-form .form-wrap {
+    width: 100%;
+    display: table;
+    overflow: hidden;
+}
+.account-form .form-wrap .col-left {
+    width: 300px;
+    text-align: center;
+}
+.account-form .form-wrap .col-left,
+.account-form .form-wrap .col-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.account-form .col-left {
+    padding: 40px;
+    background: #f5f5f5;
+}
+.account-form .avatar {
+    gap: 15px;
+    display: grid;
+    align-items: center;
+}
+.account-form .avatar-img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: auto;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.account-form .account.col-right {
+    padding: 30px;
+    position: relative;
+}
+.account-form .form-field {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+}
+.account-form .form-field .form-control {
+    padding-left: 30px;
+    height: 40px;
+    box-shadow: none;
+    border-radius: 8px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.account-form .form-field::before {
+    top: 10px;
+    left: 10px;
+    font-size: 15px;
+    color: #999999;
+    position: absolute;
+    font-family: FontAwesome;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+}
+.fa-user:before {
+    content: "\f007";
+}
+.account-form .button {
+    font-size: 14px;
+    color: white;
+    font-weight: 700;
+    padding: 10px 50px;
+    border-radius: 30px;
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}

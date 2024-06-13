@@ -1,0 +1,108 @@
+#ws-footer{
+    overflow: hidden;
+    position: relative;
+    background: var(--primary-color-2);
+}
+.footer-top-head{
+    padding: 25px 0;
+}
+.footer-contact{
+    max-width: 290px;
+}
+#ws-footer .footer-contact .footer-title {
+    color: var(--white-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 45px;
+    background: url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-call.png) no-repeat left center;
+    background-size: 35px 35px;
+    margin-bottom: 15px;
+}
+#ws-footer .footer-contact .footer-title span {
+    display: block;
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+#ws-footer .footer-contact .footer-title small{
+    font-size: 14px;
+}
+#ws-footer .footer-hotline {
+    margin-bottom: 20px;
+}
+#ws-footer .footer-hotline a {
+    display: block;
+    background: var(--yellow-cus);
+    color: var(--primary-color-2);
+    border-radius: 8px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 26px;
+    padding: 10px;
+}
+#ws-footer .footer-social {
+    color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#ws-footer .footer-social .footer-social-label{
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+#ws-footer .footer-social a {
+    color: var(--white-color);
+    font-size: 28px;
+    margin: 0 4xpx;
+}
+#ws-footer .footer-bct {
+    margin-top: 20px;
+    display: inline-flex;
+}
+#ws-footer .footer-payments {
+    display: grid;
+    column-gap: 10px;
+    margin-top: 5px;
+    grid-template-columns: repeat(4, 1fr);
+}
+/*  */
+#ws-footer .menu-footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#ws-footer .footer-menu .footer-title {
+    color: var(--white-color);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+}
+#ws-footer .footer-menu .sub-menu {
+    gap: 7px;
+    display: grid;
+    margin-top: 5px;
+    align-items: center;
+}
+#ws-footer .footer-menu .sub-menu a{
+    color: var(--white-color);
+    transition: all 0.3s ease;
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+#ws-footer .footer-menu .sub-menu a:hover {
+    padding-left: 5px;
+    color: var(--yellow-cus);
+}
+/*  */
+#footer-copyright{
+    padding: 15px 0;
+    background: var(--white-color);
+}
+.copyright{
+    font-size: 1.4rem;
+}

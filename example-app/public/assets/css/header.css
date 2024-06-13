@@ -1,0 +1,587 @@
+/* Header */
+.header{
+    height: var( --header-height);
+    /* background-image: linear-gradient(0, #61acb1, #7795db); */
+    background-color: #fcde04;
+}
+/* Header with search */
+.header-with-search{
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    gap: 40px
+}
+
+.header__logo{
+    padding: 12px 0;
+    max-width: 212px;
+}
+.header__logo-link{
+    display: block;
+    text-decoration: none;
+}
+.header__logo-img{
+    width: 211px;
+    height: 56px;
+}
+
+.header__search{
+    height: 40px;
+    flex: 1;
+    border-radius: 8px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 20%);
+}
+
+.header__search-input-wrap{
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.header__search-input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 0 12px;
+    border-radius: 8px;
+}
+.header__search-btn{
+    background-color: var(--primary-color);
+    border: none;
+    height: 34px;
+    padding: 0 24px;
+    margin: 2px 4px;
+    border-radius: 2px;
+}
+
+.header__search-btn:hover{
+    background-color: #ec593e;
+    opacity: 0.8;
+}
+
+.header__search-btn-icon{
+    font-size: 16px !important;
+    color: var(--white-color);
+}
+.header__search-input:focus ~ .header__search-history {
+    display: block;
+}
+/* Search - History */
+.header__search-history{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 2px);
+    width: calc(100% + 5px);
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 0 5px #bfbaba;
+    z-index: 9999;
+    display: none;
+}
+.header__search-history-heading{
+    margin: 8px 12px;
+    color: #999;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.header__search-history-list{
+    padding-left: 0;
+    list-style: none;
+    margin: 6px 0 0;
+}
+.header__search-history-item{
+    height: 34px;
+    padding: 0 12px;
+}
+.header__search-history-item:hover{
+    background-color: #fafafa;
+}
+.header__search-history-item a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 30px;
+    display: block;
+}
+/* header-icon */
+
+.header-icon-list{
+    padding: 0;
+    gap: 30px;
+    display: flex;
+    align-items: center;
+}
+.header-icon-list>li{
+    display: grid;
+    position: relative;
+}
+.header-icon-list>li>a.icon-hotline{
+    text-decoration: none;
+    height: 50px;
+    display: grid;
+    line-height: 1;
+    color: white;
+    border-radius: 30px;
+    align-items: center;
+    padding: 10px 15px 10px 45px;
+    background: #e20212 url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-call-white.png) no-repeat 14px 14px;
+    background-size: 25px 25px;
+}
+.header-icon-list>li>a.icon-hotline small{
+    font-size: 1.4rem;
+}
+.header-icon-list>li>a.icon-hotline b{
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 5px;
+}
+.header-icon-list>li>a{
+    font-size: 1.4rem;
+    color: #333333;
+    display: block;
+    padding-top: 35px;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.header-icon__item a:hover{
+    color: var(--primary-color);
+}
+.header-icon-list>li>a.icon-user{
+    background: url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-user.png) no-repeat top center;
+    background-size: 25px 25px;
+}
+.header-icon-list>li>a.icon-oder{
+    background: url(	https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-order.png) no-repeat top center;
+    background-size:40px 24px;
+}
+.header-icon-list>li>a.icon-cart{
+    background: url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-cart.png) no-repeat top center;
+    background-size: 30px 30px;
+}
+.icon-cart{
+    text-decoration: none;
+}
+.header .header-icon-list>li.mini-cart-box {
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: -12px;
+}
+.header .header-icon-list>li.mini-cart-box>a,
+.header .header-icon-list>li>a {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+}
+/* ******** Cart ******** */
+.header .header-icon-list>li .total-items {
+    position: absolute;
+    background: var(--primary-color);
+    font-size: 13px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    align-items: center;
+    top: 0;
+    right: 0;
+    line-height: 1;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+.box-mini-cart {
+    top: 100%;
+    right: 0px;
+    z-index: 9999;
+    display: none;
+    padding-top: 0px;
+    position: absolute;
+}
+.box-mini-cart .mini-cart-list {
+    color: #333;
+    width: 280px;
+    background: white;
+    border-radius: 0px;
+    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.23);
+    border: none;
+}
+.box-mini-cart .mini-cart-list::before {
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: white;
+    position: absolute;
+    top: -20px;
+    right: 26px;
+}
+.box-mini-cart .mini-cart-empty {
+    font-size: 14px;
+    color: var(--text-color);
+    padding: 15px;
+}
+.box-mini-cart .mini-cart-empty a {
+    color: white;
+    padding: 0 15px;
+    margin-top: 10px;
+    line-height: 30px;
+    border-radius: 20px;
+    background: var(--primary-color);
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    border: 1px solid var(--primary-color);
+}
+.inner {
+    font-size: 14px;
+    font-weight: 600;
+}
+.box-mini-cart .mini-cart-list .mini-cart-item {
+    padding: 10px 10px;
+    border-bottom: 1px solid #d8d8d8;
+}
+.box-mini-cart .mini-cart-list .mini-cart-item:last-child {
+    /* border-bottom: none; */
+}
+.box-mini-cart .mini-cart-list .mini-cart-item .thumb {
+    width: 60px;
+}
+.box-mini-cart .mini-cart-list .mini-cart-item .thumb,
+.box-mini-cart .mini-cart-list .mini-cart-item .text,
+.box-mini-cart .mini-cart-list .mini-cart-item .delcart {
+    display: table-cell;
+    vertical-align: middle;
+}
+.box-mini-cart .mini-cart-list .mini-cart-item .thumb a {
+    display: block;
+    position: relative;
+    padding-top: 60px;
+}
+.box-mini-cart .mini-cart-list .mini-cart-item .thumb img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 90%;
+    max-height: 90%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.box-mini-cart .mini-cart-list .mini-cart-item .text {
+    padding: 0 20px;
+}
+.box-mini-cart .mini-cart-list .mini-cart-item .text .item-price {
+    color: #e50006;
+    font-weight: 500;
+    margin-top: 5px;
+}
+.text a:hover{
+    color: var(--primary-color);
+}
+.delcart a:hover{
+    color: var(--primary-color);
+}
+.item-qty {
+    margin-top: -4px;
+    line-height: 30px;
+}
+.header .header-icon-list>li.mini-cart-box:hover .box-mini-cart {
+    display: block;
+}
+.box-mini-cart .mini-cart-list .mini-cart-total {
+    padding: 10px 15px;
+    background: white;
+    border-top: 1px solid #d8d8d8;
+}
+.box-mini-cart .mini-cart-list .mini-cart-total .total {
+    color: #d81f1f;
+    font-size: 16px;
+    margin-left: 5px;
+    font-weight: 700;
+    position: relative;
+    float: right;
+}
+.mini-cart-total span{
+    color: var(--text-color);
+    font-size: 16px;
+}
+.box-mini-cart .mini-cart-list .mini-cart-total a {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin: 20px 0 5px;
+}
+
+.ws-btn:hover, .ws-btn.bg-white {
+    color: var(--primary-color);
+    background: white;
+    border-color: var(--primary-color);
+}
+/* Nav */
+
+#nav{
+    top: 0;
+    z-index: 998;
+    position: sticky;
+    background: #e20212;
+    box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 20%)
+}
+.menu-primary{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap:35px;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+}
+.menu-item-phone{
+    text-decoration: none;
+    padding: 50px 14px 14px;
+    color: white;
+    font-size: 13px;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1;
+    white-space: nowrap;
+}
+.menu-item__icon-phone-iphone::before {
+    top: 15px;
+    content: "";
+    width: 20px;
+    height: 25px;
+    position: absolute;
+    left: calc(50% - 10px);
+    background: url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-iphone.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transition: all .3s ease;
+}
+.menu-primary>li>a.menu-item-phone:hover::before,
+.menu-primary>li>a.menu-item-phone.active::before {
+    background-position: 0 100%;
+}
+.menu-primary>li>a:hover,
+.menu-primary>li>a.active
+{
+    color: #fcde04;
+}
+.menu-item__icon-phone-samsung::before{
+    top: 12px;
+    content: "";
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 10px);
+    background: url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-samsung.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transition: all .3s ease;
+}
+.menu-item__icon-phone-googles::before{
+    top: 12px;
+    content: "";
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 10px);
+    background: url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-google.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transition: all .3s ease;
+}
+.menu-item__icon-phone-xiaomi::before{
+    top: 12px;
+    content: "";
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 10px);
+    background: url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-phone-other.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transition: all .3s ease;
+}
+.menu-item__icon-phone-gaming::before{
+    top: 12px;
+    content: "";
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 10px);
+    background: url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-gaming.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transition: all .3s ease;
+}
+.menu-item__icon-phone-other::before{
+    top: 12px;
+    content: "";
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 10px);
+    background: url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-phone-other.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transition: all .3s ease;
+}
+.menu-item__icon-tablet::before{
+    top: 12px;
+    content: "";
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 10px);
+    background: url(https://mobileworld.com.vn/ws-content/themes/mobileworld/assets/images/icon-tablet.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transition: all .3s ease;
+}
+.menu-item__icon-blog::before{
+    top: 12px;
+    content: "";
+    width: 36px;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 20px);
+    background: url(../../assets/img/icon-news.png) no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transition: all .3s ease;
+}
+
+.items{
+    display: none;
+    position: absolute;
+    background: white;
+    left: 0;
+    right: 0;
+    top: 100%;
+    text-align: left;
+    padding: 5px 20px 20px;
+    box-shadow: 0 1px 7px 0 rgb(0 0 0 / 35%);
+    border-radius: 0 0 8px 8px;
+    font-size: 13px;
+    column-gap: 50px;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+.items li{
+    line-height: 20px;
+    padding: 15px 0px 14px;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #dddddd;
+    list-style: none;
+}
+.items > li > a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+.icon-tablet:hover .items,
+.icon-phone-other:hover .items,
+.icon-phone-asus:hover .items,
+.icon-phone-xiaomi:hover .items,
+.icon-phone-googles:hover .items,
+.icon-phone-samsung:hover .items,
+.icon-phone-iphone:hover .items{
+    display: grid;
+}
+.items > li > a:hover{
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 992px) {
+    #nav {
+        overflow-x: auto;
+    }
+}
+
+/***** Acc *****/
+.header-icon__item:hover .member-widget-wrap {
+    display: block;
+}
+.member-widget-wrap {
+    left: 0;
+    top: 100%;
+    z-index: 999;
+    display: none;
+    padding-top: 11px;
+    position: absolute;
+}
+.member-widget-wrap::before {
+    top: -9px;
+    left: 25px;
+    content: '';
+    border-width: 10px;
+    position: absolute;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: white;
+}
+.member-widget {
+    width: 220px;
+    padding: 15px;
+    background: white;
+}
+.member-widget .avatar-thumb {
+    gap: 10px;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.member-widget .avatar-thumb .img {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+.member-widget .avatar-thumb .img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+.member-widget .username {
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.member-widget .item {
+    border-bottom: 1px dashed #ddd;
+}
+.member-widget .item a {
+    display: flex;
+    padding: 10px 0;
+    line-height: 20px;
+    align-items: center;
+    font-size: 14px;
+}
+.member-widget .item a::before {
+    content: '\f105';
+    padding-right: 7px;
+}
+a::before, a::after {
+    font-family: 'FontAwesome';
+}
